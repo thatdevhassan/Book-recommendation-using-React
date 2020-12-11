@@ -65,8 +65,8 @@ export default function App() {
         <ul>
           {dataBase[lang].map((book) => (
             <li class="mainlist" key={book.name}>
-              <div>Name : '{book.Name}' </div>
-              <div>Authour : '{book.Author}' </div>
+              <div>Name: '{book.Name}' </div>
+              <div>Authour: '{book.Author}' </div>
               <div>Rating: '{book.Rating}'</div>
             </li>
           ))}
