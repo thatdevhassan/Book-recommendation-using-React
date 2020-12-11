@@ -22,11 +22,6 @@ var dataBase = {
     { Name: "Python for beginners", Author: "Eric Matthews", Rating: "4/5" }
   ],
 
-  // CPP : [
-  //   {Name: "Automate the boring stuff", Author: "Al Sweigart",Rating: "4.9/5"},
-  //   {Name: "Python for beginners", Author: "Eric Matthews", Rating: "4/5" }
-  // ],
-
   cSharp: [
     {
       Name: "C# 8.0 and .NET, Core 3.0",
@@ -43,10 +38,10 @@ var dataBase = {
 
 // main
 export default function App() {
-  const [selectedGenre, setGenre] = useState("pyLib");
+  const [lang, setLang] = useState("pyLib");
 
-  function genreClickHandler(genre) {
-    setGenre(genre);
+  function clickLang(language) {
+    setLang(language);
   }
 
   return (
@@ -58,9 +53,9 @@ export default function App() {
       </div>
 
       <div>
-        {Object.keys(dataBase).map((genre) => (
-          <button class="bookbtn" onClick={() => genreClickHandler(genre)}>
-            {genre}
+        {Object.keys(dataBase).map((language) => (
+          <button class="bookbtn" onClick={() => clickLang(language)}>
+            {language}
           </button>
         ))}
       </div>
@@ -68,7 +63,7 @@ export default function App() {
 
       <div>
         <ul>
-          {dataBase[selectedGenre].map((book) => (
+          {dataBase[lang].map((book) => (
             <li class="mainlist" key={book.name}>
               {" "}
               <div>Name : '{book.Name}' </div>
