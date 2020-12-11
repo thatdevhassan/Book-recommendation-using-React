@@ -1,4 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+:root {
+  --primary-color: rgb(250, 137, 154);
+}
+
 .App {
-  font-family: sans-serif;
+  font-family: Roboto Mono, sans-serif;
   text-align: center;
+  background: url("https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.top {
+  background: var(--primary-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  bottom: 20px;
+}
+
+.bookbtn {
+  font-family: Roboto Mono;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-radius: 2rem;
+  /* border-color:black; */
+  border: none;
+}
+
+.bookbtn:hover {
+  color: red;
+  background: rgb(250, 137, 154);
+  font-weight: bold;
+  border: 1px solid;
+  border-color: black;
+}
+
+hr {
+  margin: 2rem 0rem;
+}
+
+.mainlist {
+  list-style: none;
+  margin: 2rem;
+  text-align: justify;
+  font-size: 20px;
+  border: 2px solid;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: var(--primary-color);
 }
