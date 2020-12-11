@@ -40,7 +40,7 @@ var dataBase = {
 export default function App() {
   const [lang, setLang] = useState("pyLib");
 
-  function clickLang(language) {
+  function genreClickHandler(language) {
     setLang(language);
   }
 
@@ -54,7 +54,7 @@ export default function App() {
 
       <div>
         {Object.keys(dataBase).map((language) => (
-          <button class="bookbtn" onClick={() => clickLang(language)}>
+          <button class="bookbtn" onClick={() => genreClickHandler(language)}>
             {language}
           </button>
         ))}
@@ -65,7 +65,6 @@ export default function App() {
         <ul>
           {dataBase[lang].map((book) => (
             <li class="mainlist" key={book.name}>
-              {" "}
               <div>Name : '{book.Name}' </div>
               <div>Authour : '{book.Author}' </div>
               <div>Rating: '{book.Rating}'</div>
